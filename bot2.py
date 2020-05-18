@@ -213,7 +213,7 @@ class Bot(discord.Client):
         if message.author == self.user or message.guild == None:
             return
 
-        if message.content.lower() == "Ku":
+        if message.content.lower() == "ku":
             await message.delete()
             if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
                 self.embed_msg = None
@@ -221,6 +221,9 @@ class Bot(discord.Client):
                 await self.update_embeds()
                 self.embed_msg = \
                     await message.channel.send('',embed=self.embed)
+                await self.embed_msg.add_reaction("✅")
+                #await self.embed_msg.add_reaction("âœ”")
+                await self.embed_msg.add_reaction("❌")
                 self.embed_channel_id = message.channel.id
             else:
                 await message.channel.send("*Fuckkkkkkk**cmd!** :stuck_out_tongue_winking_eye:")
