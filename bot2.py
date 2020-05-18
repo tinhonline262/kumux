@@ -119,14 +119,16 @@ class Bot(discord.Client):
 
         # embed creation
         self.embed=discord.Embed(title="Trivia Support Pro", description="**Kiếm nè....** :spy:")
-        self.embed.set_author(name ='',url=' ',icon_url='')
+        self.embed.set_author(name ='Trivia Support Pro',url=' ',icon_url='https://cdn.discordapp.com/attachments/699517929435168768/711962977296973864/1589813196193.jpg')
         self.embed.add_field(name="Option 1", value="0", inline=False)
         self.embed.add_field(name="Option 2", value="0", inline=False)
         self.embed.add_field(name="Option 3", value="0", inline=False)
         self.embed.add_field(name="Option 4", value="0", inline=False)
         self.embed.add_field(name="Best Answer",value=":mag:")
+        self.embed.set_footer(text='  Trivia Support Pro 🥒 | MADE ♥️ BY TINHHUYNH',icon_url = "https://cdn.discordapp.com/attachments/682520648823603201/689411362304032796/JPEG_20200317_151913.jpg?width=240&height=428")
         self.embed.set_footer(text=f"Tinhhuynh", \
             icon_url="https://cdn.discordapp.com/attachments/578965576651898890/595128602081755136/Lol_question_mark.png")
+        self.embed.set_image(url = 'https://cdn.discordapp.com/attachments/539066238870224903/606135147913543693/Tw_1-1-1.gif')
         # await self.bot.add_reaction(embed,':spy:')
 
 
@@ -191,6 +193,10 @@ class Bot(discord.Client):
         self.embed.set_field_at(2, name="Option 3", value="**{0}**{1}".format(lst_scores[2],three_check))
         self.embed.set_field_at(3, name="Option 4", value="**{0}**{1}".format(lst_scores[3],four_check))
         self.embed.set_field_at(4,name="Best Answer",value=best)
+        self.embed.set_footer(text='  Trivia Support Pro 🥒 | MADE ♥️ BY TINHHUYNH',icon_url = "https://cdn.discordapp.com/attachments/682520648823603201/689411362304032796/JPEG_20200317_151913.jpg?width=240&height=428")
+        self.embed.set_thumbnail(url =  'https://cdn.discordapp.com/attachments/707193199151677461/707200954424098866/1588680101537.jpg')
+        self.embed.set_image(url = 'https://cdn.discordapp.com/attachments/539066238870224903/606135147913543693/Tw_1-1-1.gif')
+        
 
         if self.embed_msg is not None:
             await self.embed_msg.edit(embed=self.embed)
