@@ -13,7 +13,7 @@ BOT_OWNER_ROLE = 'BT RUNNER' # change to what you need
  
 
  
-oot_channel_id_list = ["706468631432659006"]
+oot_channel_id_list = ["706468631432659006","698565842354438244"]
 answer_pattern = re.compile(r'(not|n)?([1-4]{1})(\?)?(cnf|cf|sure)?(\?)?$', re.IGNORECASE)
 
 apgscore = 2000
