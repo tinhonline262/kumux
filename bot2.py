@@ -8,8 +8,7 @@ import multiprocessing
 import threading
 import concurrent
 
-BOT_OWNER_ROLE = 'Rohith' # change to what you need
-#BOT_OWNER_ROLE_ID = "524427711180177418"
+BOT_OWNER_ROLE = 'BT RUNNER' # change to what you need
   
  
 
@@ -282,7 +281,7 @@ def bot_with_cyclic_update_process(update_event, answer_scores):
     upd_thread.start()
 
     loop = asyncio.get_event_loop()
-    loop.create_task(bot.start('NjI4OTA4MjkyODEwNDczNDky.XZSCog.45-5-yFyp_psCWvKf-5nrHN1jIo'))
+    loop.create_task(bot.start('NzExOTUyNzU0OTY0MTY4NzA0.XsKmIg.DjCHMBUi7L_ETKRQ-QI6BuaIGj0'))
     loop.run_forever()
 
 
