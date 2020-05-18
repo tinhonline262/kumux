@@ -118,8 +118,8 @@ class Bot(discord.Client):
         self.answer_scores = answer_scores
 
         # embed creation
-        self.embed=discord.Embed(title="Trivia Support Pro", description="**Kiếm nè....** :spy:")
-        self.embed.set_author(name ='Trivia Support Pro',url=' ',icon_url='https://cdn.discordapp.com/attachments/699517929435168768/711962977296973864/1589813196193.jpg')
+        self.embed=discord.Embed(title="_Trivia Support Pro_", description="**Connect to Kumu...** :spy:")
+        self.embed.set_author(name ='',url=' ',icon_url='https://cdn.discordapp.com/attachments/699517929435168768/711962977296973864/1589813196193.jpg')
         self.embed.add_field(name="Option 1", value="0", inline=False)
         self.embed.add_field(name="Option 2", value="0", inline=False)
         self.embed.add_field(name="Option 3", value="0", inline=False)
