@@ -205,7 +205,7 @@ class Bot(discord.Client):
 
         await self.clear_results()
         await self.update_embeds()
-        await self.change_presence(activity=discord.Game(name='Trivia by Rohith|+help'))
+        await self.change_presence(activity=discord.Game(name='command: Ku'))
 
     async def on_message(self, message):
 
@@ -226,7 +226,7 @@ class Bot(discord.Client):
                 await message.channel.send("*Fuckkkkkkk**cmd!** :stuck_out_tongue_winking_eye:")
             return
 
-        if message.content.startswith('+help'):
+        if message.content.startswith('fhuhoti'):
           if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
            embed = discord.Embed(title="Help Commands", description="**How to Run Bot**", color=0x00ff00)
            embed.add_field(name="Support Game", value="**Kumu Answer For `Ku`**", inline=False)
