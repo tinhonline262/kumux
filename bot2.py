@@ -8,41 +8,16 @@ import multiprocessing
 import threading
 import concurrent
 
-BOT_OWNER_ROLE = 'Rohith' # change to what you need
-#BOT_OWNER_ROLE_ID = "524427711180177418"
+BOT_OWNER_ROLE = 'BT RUNNER' # change to what you need
+#BOT_OWNER_ROLE_ID = "701304121394724866"
   
  
 
  
-oot_channel_id_list = [
-    "626320837120753684", #confetti Mexico galaxy
-    "620842231229841421", #loco galaxy
-    "626769223846461470", #confetti India galaxy
-    "620842232098062339", #jeetoh galaxy
-    "620471823787622420", #confetti India study iq
-    "626458458064945164", #loco study iq
-    "620471737515245578", #jeetoh study iq
-    "628290139495464990", #loco United Kingdom
-    "628290342835322890", #jeetoh United Kingdom
-    "628291366115475486", #flipkart United Kingdom
-    "606130408018542633", #flipkat Trivia fire
-    "595635734904307742", #loco Trivia fire
-    "595636121124208640", #jeetoh Trivia fire
-    "605443517069656084", #confetti India Trivia fire
-    "599991033547325459", #topiq Vietnam Trivia pride
-    "611919358863605760", #mocha Vietnam Trivia pride
-    "626382041176342538", #te-media Trivia pride
-    "628934404386848778", #confetti Mexico Trivia pride
-    "618153590929752095", #le-quiz Mexico Trivia pride
-    "556885929911124008", #tgl cashquizlive
-    "585618493093969923", # swag iq tgl
-    "446448437119025154", #sawg iq tgl
-    "523359846297239575", #the q tgl
-    "446448458090545172", #the q trivia tribe
-]
-answer_pattern = re.compile(r'(not|n)?([1-4]{1})(\?)?(cnf)?(\?)?$', re.IGNORECASE)
+oot_channel_id_list = ["706468631432659006"]
+answer_pattern = re.compile(r'(not|n)?([1-4]{1})(\?)?(cnf|w)?(\?)?$', re.IGNORECASE)
 
-apgscore = 500
+apgscore = 2000
 nomarkscore = 400
 markscore = 300
 
@@ -86,8 +61,8 @@ class SelfBot(discord.Client):
         self.answer_scores = answer_scores
 
     async def on_ready(self):
-        print("======================")
-        print("Nelson Trivia Self Bot")
+        print("===Bot chạy===")
+        print("Trivia Support Pro")
         print("Connected to discord.")
         print("User: " + self.user.name)
         print("ID: " + str(self.user.id))
@@ -144,13 +119,13 @@ class Bot(discord.Client):
         self.answer_scores = answer_scores
 
         # embed creation
-        self.embed=discord.Embed(title="NightMare Trivia", description="**Web Searching** :spy:")
-        self.embed.set_author(name ='',url=' ',icon_url='')
-        self.embed.add_field(name="Option I", value="0", inline=False)
-        self.embed.add_field(name="Option II", value="0", inline=False)
-        self.embed.add_field(name="Option III", value="0", inline=False)
-        self.embed.add_field(name="Option IV", value="0", inline=False)
-        self.embed.add_field(name="Best Answer",value=":mag:")
+        self.embed=discord.Embed(title="Trivia Support Pro 🥒", description="**Connect....🖥️** :spy:")
+        self.embed.set_author(name ='Kumu',url=' ',icon_url='')
+        self.embed.add_field(name="Câu 1", value="0", inline=False)
+        self.embed.add_field(name="Câu 2", value="0", inline=False)
+        self.embed.add_field(name="Câu 3", value="0", inline=False)
+        self.embed.add_field(name="Câu 4", value="0", inline=False)
+        self.embed.add_field(name="Có thể Sure",value=":mag:")
         self.embed.set_footer(text=f"zlex#0168", \
             icon_url="https://cdn.discordapp.com/attachments/578965576651898890/595128602081755136/Lol_question_mark.png")
         # await self.bot.add_reaction(embed,':spy:')
@@ -212,11 +187,11 @@ class Bot(discord.Client):
 #             if answer == 3:
 #                 three_check = ":x:"            
  
-        self.embed.set_field_at(0, name="Option I", value="**{0}**{1}".format(lst_scores[0], one_check))
-        self.embed.set_field_at(1, name="Option II", value="**{0}**{1}".format(lst_scores[1], two_check))
-        self.embed.set_field_at(2, name="Option III", value="**{0}**{1}".format(lst_scores[2],three_check))
-        self.embed.set_field_at(3, name="Option IV", value="**{0}**{1}".format(lst_scores[3],four_check))
-        self.embed.set_field_at(4,name="Best Answer",value=best)
+        self.embed.set_field_at(0, name="Câu 1", value="**{0}**{1}".format(lst_scores[0], one_check))
+        self.embed.set_field_at(1, name="Câu 2", value="**{0}**{1}".format(lst_scores[1], two_check))
+        self.embed.set_field_at(2, name="Câu 3", value="**{0}**{1}".format(lst_scores[2],three_check))
+        self.embed.set_field_at(3, name="Câu 4", value="**{0}**{1}".format(lst_scores[3],four_check))
+        self.embed.set_field_at(4,name="Có thể Sure",value=best)
 
         if self.embed_msg is not None:
             await self.embed_msg.edit(embed=self.embed)
@@ -238,7 +213,7 @@ class Bot(discord.Client):
         if message.author == self.user or message.guild == None:
             return
 
-        if message.content.lower() == "+j":
+        if message.content.lower() == "Ku":
             await message.delete()
             if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
                 self.embed_msg = None
@@ -248,13 +223,13 @@ class Bot(discord.Client):
                     await message.channel.send('',embed=self.embed)
                 self.embed_channel_id = message.channel.id
             else:
-                await message.channel.send("**Lol** You Not Have permission To Use This **cmd!** :stuck_out_tongue_winking_eye:")
+                await message.channel.send("*Fuckkkkkkk**cmd!** :stuck_out_tongue_winking_eye:")
             return
 
         if message.content.startswith('+help'):
           if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
            embed = discord.Embed(title="Help Commands", description="**How to Run Bot**", color=0x00ff00)
-           embed.add_field(name="Support Game", value="**Loco\nBrainbaazi\nPollbaazi\nSwag-iq\nThe-Q\nConfett-India\nCash-Quiz-Live\nHQ\nconfetti Mexico\nte-media\nmocha Vietnam\nconfetti Vietnam\nmomo Vietnam Tivia\n\nJeetoh Answer For `+j`**", inline=False)
+           embed.add_field(name="Support Game", value="**Kumu Answer For `Ku`**", inline=False)
            embed.add_field(name="when Question come put command", value="** + is command work for all support game**", inline=False)
            await message.channel.send(embed=embed)
 
@@ -282,7 +257,7 @@ def bot_with_cyclic_update_process(update_event, answer_scores):
     upd_thread.start()
 
     loop = asyncio.get_event_loop()
-    loop.create_task(bot.start('NjI4OTA4MjkyODEwNDczNDky.XZSCog.45-5-yFyp_psCWvKf-5nrHN1jIo'))
+    loop.create_task(bot.start('NzExOTUyNzU0OTY0MTY4NzA0.XsKf-g.YgRZMzb-hYIAAZRJngrL8e7GRAY'))
     loop.run_forever()
 
 
@@ -291,7 +266,7 @@ def selfbot_process(update_event, answer_scores):
     selfbot = SelfBot(update_event, answer_scores)
 
     loop = asyncio.get_event_loop()
-    loop.create_task(selfbot.start('NjI4OTA4MjkyODEwNDczNDky.XZSCog.45-5-yFyp_psCWvKf-5nrHN1jIo',
+    loop.create_task(selfbot.start('NTczMzU3OTAzNzQyODk0MDgw.XrK5Iw.eLmG8t81CtCtB-C_w9k435408kc',
                                    bot=False))
     loop.run_forever()
 
