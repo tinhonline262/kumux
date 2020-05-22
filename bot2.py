@@ -124,7 +124,7 @@ class Bot(discord.Client):
         self.embed.add_field(name="Option 2", value="0", inline=False)
         self.embed.add_field(name="Option 3", value="0", inline=False)
         self.embed.add_field(name="Option 4", value="0", inline=False)
-        self.embed.add_field(name="Best Answer",value=":mag:")
+        self.embed.add_field(name="__Answer__",value=":mag:")
         self.embed.set_footer(text='  Trivia Support Pro 🥒 | MADE ♥️ BY TINHHUYNH',icon_url = "https://cdn.discordapp.com/attachments/682520648823603201/689411362304032796/JPEG_20200317_151913.jpg?width=240&height=428")
         self.embed.set_footer(text=f"Tinhhuynh", \
             icon_url="https://cdn.discordapp.com/attachments/578965576651898890/595128602081755136/Lol_question_mark.png")
@@ -192,7 +192,7 @@ class Bot(discord.Client):
         self.embed.set_field_at(1, name="Option 2", value="**{0}**{1}".format(lst_scores[1], two_check))
         self.embed.set_field_at(2, name="Option 3", value="**{0}**{1}".format(lst_scores[2],three_check))
         self.embed.set_field_at(3, name="Option 4", value="**{0}**{1}".format(lst_scores[3],four_check))
-        self.embed.set_field_at(4,name="Best Answer",value=best)
+        self.embed.set_field_at(4,name="__Answer__",value=best)
         self.embed.set_footer(text='  Trivia Support Pro 🥒 | MADE ♥️ BY TINHHUYNH',icon_url = "https://cdn.discordapp.com/attachments/682520648823603201/689411362304032796/JPEG_20200317_151913.jpg?width=240&height=428")
         self.embed.set_thumbnail(url =  'https://cdn.discordapp.com/attachments/707193199151677461/707200954424098866/1588680101537.jpg')
         self.embed.set_image(url = 'https://cdn.discordapp.com/attachments/539066238870224903/606135147913543693/Tw_1-1-1.gif')
@@ -210,7 +210,7 @@ class Bot(discord.Client):
 
         await self.clear_results()
         await self.update_embeds()
-        await self.change_presence(activity=discord.Game(name='command: +ku'))
+        await self.change_presence(activity=discord.Game(name='command: ku'))
 
     async def on_message(self, message):
 
@@ -218,7 +218,7 @@ class Bot(discord.Client):
         if message.author == self.user or message.guild == None:
             return
 
-        if message.content.lower() == "+ku":
+        if message.content.lower() == "ku":
             await message.delete()
             if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
                 self.embed_msg = None
@@ -262,7 +262,7 @@ def bot_with_cyclic_update_process(update_event, answer_scores):
     upd_thread.start()
 
     loop = asyncio.get_event_loop()
-    loop.create_task(bot.start('NzExOTUyNzU0OTY0MTY4NzA0.XsKmIg.DjCHMBUi7L_ETKRQ-QI6BuaIGj0'))
+    loop.create_task(bot.start('NzExOTUyNzU0OTY0MTY4NzA0.XsfeGg.3X9ObFa7cCQ0JtkGJrD6KwpTuD8'))
     loop.run_forever()
 
 
