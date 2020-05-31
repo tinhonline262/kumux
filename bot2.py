@@ -18,7 +18,7 @@ answer_pattern = re.compile(r'(not|n)?([1-4]{1})(\?)?(cnf|cf|sure)?(\?)?$', re.I
 
 apgscore = 2000
 nomarkscore = 400
-markscore = 300
+markscore = 350
 
 async def update_scores(content, answer_scores):
     global answer_pattern
