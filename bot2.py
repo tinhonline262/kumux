@@ -210,7 +210,7 @@ class Bot(discord.Client):
 
         await self.clear_results()
         await self.update_embeds()
-        await self.change_presence(activity=discord.Game(name='command: ku'))
+        await self.change_presence(activity=discord.Game(name='command: Ku'))
 
     async def on_message(self, message):
 
